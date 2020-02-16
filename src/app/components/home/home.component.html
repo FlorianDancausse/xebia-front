@@ -1,0 +1,5 @@
+<div class="books-container">
+    <div *ngFor="let book of books" class="book">
+        <app-book [book]="book" [isSelected]="isBookSelected(book)" (addToCart)="onAddToCart($event)"></app-book>
+    </div>
+</div>

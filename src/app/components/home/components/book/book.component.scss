@@ -1,0 +1,45 @@
+:host {
+    mat-card-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+
+        &:hover {
+            > img {
+                opacity: 0.2;
+            }
+
+            > .synopsis-container {
+                opacity: 1;
+            }
+        }
+
+        > img, .synopsis-container {
+            transition: opacity 1s;
+        }
+
+        > img {
+            width: 100%;
+            margin: 0;
+            border-radius: 8px;
+        }
+
+        > .synopsis-container {
+            $marginValue: 8px;
+            max-height: calc(100% - #{$marginValue * 2});
+            position: absolute;
+            top: 0;
+            margin: $marginValue;
+            opacity: 0;
+            overflow: auto;
+            cursor: default;
+        }
+    }
+
+    mat-card-actions {
+        > button mat-icon {
+            margin-left: 8px;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+    <div routerLink="/home" class="home-link">
+        <mat-icon>home</mat-icon>
+        <span>Henri Potier</span>
+    </div>
+    <mat-icon class="cart" [matBadge]="selectedBooksAmount" matBadgeColor="warn" routerLink="/cart">shopping_cart</mat-icon>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
